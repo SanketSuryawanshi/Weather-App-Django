@@ -1,0 +1,30 @@
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>| Weather APP | </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
+</head>
+<body>
+    <div class="container">
+        <form method="POST">
+        {% csrf_token %}
+            <input type = "text"  placeholder = "Enter City Name" name = "city_name" />
+            <button type="submit" value="submit">Submit</button>
+        </form>
+
+        <div class="card">
+            <h2> {{payload.city}} </h2>
+            <h2> {{payload.Desc}} </h2>
+            <img src="{{payload.Icon}}"> 
+            <h2> {{payload.Temp}} °C</h2>
+        </div>
+    </div>
+</body>
+</html>

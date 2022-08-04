@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+}
+
+.container form{
+    margin: 30px 0;
+}
+
+.container form input{
+    padding: 5px;
+    border: 1px solid #000;
+}
+
+.container form button{
+    padding: 5px;
+    border: none;
+    background: #9fef00;
+}
+
+.container .card{
+    width: 270px;
+    height: 350px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    color:#9fef00;
+    border: 2px solid #9fef00;
+}
+
+.container .card img{
+    width: 80px;
+}
